@@ -1,5 +1,8 @@
 const express = require("express");
 const routes = express.Router()
+const cors = require("cors");
+
+routes.use(cors()); // libera todas as rotas para acesso por origens diferentes
 
 const CarroController = require("./controllers/CarroController");
 const UsuarioController = require("./controllers/UsuarioController");
